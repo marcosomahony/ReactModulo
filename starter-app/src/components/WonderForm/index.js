@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import Input from './components/Input'
+import Radio from './components/Radio'
 
 const WonderForm = props => {
     return (
@@ -14,6 +15,8 @@ const WonderForm = props => {
             <Input type="text" name="text" onChange={props.onInputChange} />
             <p>Edad</p>
             <Input type="number" name="age" onChange={props.onInputChange} />
+            <p>Genero: </p>
+            <Radio name="gender" values={['man', 'woman', 'other']} defaultValue="man" onInputChange={props.onInputChange} />
         </div>
     )
 }

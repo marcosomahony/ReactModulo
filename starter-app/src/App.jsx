@@ -13,7 +13,8 @@ class App extends Component {
             username: 'Marcos',
             apellido: 'OMahony',
             text: 'cosa',
-            age: '21'
+            age: '21',
+            gender: 'man'
         }
     }
 
@@ -31,8 +32,8 @@ class App extends Component {
     }
 
     render() {
-        const { username, apellido, text, age } = this.state
-        const message = `Hi ${username} ${apellido}! Age: ${age}. Text: ${text}.`
+        const { username, apellido, text, age, gender } = this.state
+        const message = `Hi ${username} ${apellido}! Age: ${age}. Text: ${text}. Gender: ${gender}`
 
         return (
             <div className="App">
