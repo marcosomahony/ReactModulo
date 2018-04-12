@@ -9,10 +9,11 @@ class Input extends React.Component {
         }
     }
 
-    onValueChange = e => {
+    onValueChange = e => { // e es el elemento sobre el cual se esta produciendo un evento, en este caso el input. Igual que un query selector
         let value = e.target.value
-        const { onChange } = this.props
-        onChange(value)
+        const { onChange, type, name } = this.props
+        onChange(name, value);
+        
         this.setState({inputValue: value})
     }
 
@@ -20,7 +21,7 @@ class Input extends React.Component {
         const { inputValue } = this.state
 
         return (
-            <input type="text" onChange={this.onValueChange} value={inputValue} />
+            <input type={this.props.type} onChange={this.onValueChange} value={inputValue} />
         )
     }
 }

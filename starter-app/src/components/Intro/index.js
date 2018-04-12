@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react'
 
 class Intro extends Component {
     constructor(props) {
@@ -10,14 +10,13 @@ class Intro extends Component {
     }
 
     render() {
-        const {message} = this.state
-        //const m = this.state.message
+        const { message } = this.state
 
         return (
-            <p className="App-intro" dangerouslySetInnerHTML= {{__html: message}} />
-            /* <p className="App-intro">
+            // <p className="App-intro" dangerouslySetInnerHTML={{ __html: message }} />
+            <p className="App-intro">
                 {message}
-            </p> */
+            </p>
         );
     }
 }
